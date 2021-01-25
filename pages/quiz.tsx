@@ -16,6 +16,8 @@ export default function Quiz() {
       <Head>
         <meta property="og:image" content={db.bg} />
         <title>{db.title}</title>
+        <meta property="og:title" content={db.title} key="title" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" type="image/png" href={db.icon} />
       </Head>
       <QuizBackground backgroundImage={db.bg}>
