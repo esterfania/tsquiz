@@ -8,27 +8,12 @@ import {
   QuizInput,
 } from "../src/components";
 import db from "../db.json";
-import Head from "next/head";
+import { QuizHeader } from "../src/components/QuizHeader";
 
 export default function Quiz() {
   return (
     <>
-      <Head>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta charSet="UTF-8" />
-        <meta property="og:image" content={db.bg} />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:width" content="800" />
-        <meta property="og:image:height" content="600" />
-        <meta property="og:title" content={db.title} key="title" />
-        <meta
-          property="og:description"
-          content="Dota 2 Quiz | Imersão React + Next Js Alura"
-        />
-        <meta name="keywords" content="HTML, CSS, JavaScript" />
-        <meta property="article:author" content="Ester Gama"/>
-        <link rel="icon" type="image/png" href={db.icon} />
-      </Head>
+      <QuizHeader props={db}></QuizHeader>
       <QuizBackground backgroundImage={db.bg}>
         <QuizContainer>
           <QuizLogo />
