@@ -33,8 +33,8 @@ export default function Quiz() {
             </Widget.Content>
           </Widget>
           <Footer />
-          <GitHubCorner projectUrl="https://github.com/esterfania/tsquiz" />
         </QuizContainer>
+        <GitHubCorner projectUrl="https://github.com/esterfania/tsquiz" />
       </QuizBackground>
     </>
   );
