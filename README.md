@@ -1,9 +1,9 @@
 # Dota 2 Quiz
 
-Esse é um simples projeto de estudos do Next JS e React, construido durante a imersão Alura.
-## How to use it?
-
 This is a simple study project for Next JS and React, built during Alura's immersion.
+
+![dota2quiz](https://user-images.githubusercontent.com/35200622/105756352-3f969e00-5f2b-11eb-911e-20ed9820f179.png)
+
 
 ## Notes
 
