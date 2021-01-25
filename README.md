@@ -1,4 +1,4 @@
-# TSQuiz
+# Dota 2 Quiz
 
 Esse é um simples projeto de estudos do Next JS e React, construido durante a imersão Alura.
 ## How to use it?
