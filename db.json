@@ -26,7 +26,7 @@
   "theme": {
     "colors": {
       "primary": "#56449C",
-      "secondary": "#686886",
+      "secondary": "#686886b3",
       "mainBg": "#171B35",
       "contrastText": "#FFFFFF",
       "wrong": "#f44336",
