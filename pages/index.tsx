@@ -1,10 +1,26 @@
-import styled from 'styled-components'
-
-const Title = styled.h1`
-  color: red;
-  font-size: 50px;
-`
+import { BackgroundImage, QuizContainer, Widget } from "../src/components";
 
 export default function Home() {
-  return <Title>My page</Title>
+  return (
+    <BackgroundImage>
+      <QuizContainer>
+        <Widget>
+          <Widget.Header>
+            <h1>Dota 2</h1>
+          </Widget.Header>
+          <Widget.Content>
+            <p>AHSDFASIDFHAHSDFHA AJSDFHAahsdfhasd</p>
+          </Widget.Content>
+        </Widget>
+        <Widget>
+          <Widget.Header>
+            <h1>Dota 2</h1>
+          </Widget.Header>
+          <Widget.Content>
+            <p>AHSDFASIDFHAHSDFHA AJSDFHAahsdfhasd</p>
+          </Widget.Content>
+        </Widget>
+      </QuizContainer>
+    </BackgroundImage>
+  );
 }
