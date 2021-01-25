@@ -1,9 +1,35 @@
 import styled from "styled-components";
-import db from "../../../db.json";
 
-export const BackgroundImage: any = styled.div`
-  background-image: url(${db.bg});
-  flex: 1;
-  background-position: center;
+export const QuizBackground: any = styled.div`
+  width: 100%;
   background-size: cover;
+  background-position: center;
+  background-image: url(${({ backgroundImage }: any) => backgroundImage});
+  background-color: ${({ theme }) => theme.colors.mainBg};
+  flex: 1;
+  @media screen and (max-width: 500px) {
+    background-image: none;
+    &:after {
+      content: "";
+      background-size: cover;
+      background-position: center;
+      background-image: linear-gradient(
+          transparent,
+          ${({ theme }) => theme.colors.mainBg}
+        ),
+        url(${({ backgroundImage }: any) => backgroundImage});
+      display: block;
+      width: 100%;
+      height: 210px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+    *:first-child {
+      position: relative;
+      z-index: 10;
+    }
+  }
 `;

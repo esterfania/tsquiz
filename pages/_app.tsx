@@ -2,7 +2,6 @@ import { createGlobalStyle, ThemeProvider } from "styled-components";
 import db from "../db.json";
 
 const theme = db.theme;
-
 const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
