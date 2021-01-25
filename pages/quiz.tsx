@@ -14,6 +14,7 @@ export default function Quiz() {
       <Head>
         <meta property="og:image" content={db.bg} />
         <title>Dota 2 Quiz</title>
+        <link rel="icon" type="image/png" href="https://i.pinimg.com/originals/c1/ec/da/c1ecda477bc92b6ecfc533b64d4a0337.png"/>
       </Head>
       <QuizBackground backgroundImage={db.bg}>
         <QuizContainer>
