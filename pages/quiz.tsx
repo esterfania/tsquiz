@@ -4,6 +4,7 @@ import {
   Widget,
   Footer,
   GitHubCorner,
+  QuizLogo,
 } from "../src/components";
 import db from "../db.json";
 import Head from "next/head";
@@ -13,25 +14,24 @@ export default function Quiz() {
     <>
       <Head>
         <meta property="og:image" content={db.bg} />
-        <title>Dota 2 Quiz</title>
-        <link rel="icon" type="image/png" href="https://i.pinimg.com/originals/c1/ec/da/c1ecda477bc92b6ecfc533b64d4a0337.png"/>
+        <title>{db.title}</title>
+        <link rel="icon" type="image/png" href={db.icon} />
       </Head>
       <QuizBackground backgroundImage={db.bg}>
         <QuizContainer>
+          <QuizLogo />
           <Widget>
             <Widget.Header>
-              <h1>Dota 2</h1>
+              <h1>{db.title}</h1>
             </Widget.Header>
             <Widget.Content>
-              <p>AHSDFASIDFHAHSDFHA AJSDFHAahsdfhasd</p>
+              <p>{db.description}</p>
             </Widget.Content>
           </Widget>
           <Widget>
-            <Widget.Header>
-              <h1>Dota 2</h1>
-            </Widget.Header>
             <Widget.Content>
-              <p>AHSDFASIDFHAHSDFHA AJSDFHAahsdfhasd</p>
+              <h1>Quizes da galera</h1>
+              <p>{db.description}</p>
             </Widget.Content>
           </Widget>
           <Footer />

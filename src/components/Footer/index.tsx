@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const FooterWrapper = styled.footer`
-  background-color: ${({ theme }) => theme.colors.secondary};
+  background-color: #686886b3;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -33,16 +33,16 @@ export function Footer(props: any) {
           alt="Logo Alura"
         />
       </a>
+
       <p>
-        <p>
-          <span>Imersão React + Next Js</span>
-        </p>
-        <p>
-          <span>Criado por: </span>
-          <a href="https://github.com/esterfania">
-            <span>esterfania</span>
-          </a>
-        </p>
+        Criado durante a{" "}
+        <a href="https://www.alura.com.br/">
+          <span>Imersão React da Alura</span>
+        </a>{" "}
+        por{" "}
+        <a href="https://github.com/esterfania">
+          <span>@esterfania</span>
+        </a>
       </p>
     </FooterWrapper>
   );

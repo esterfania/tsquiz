@@ -1,7 +1,8 @@
 {
   "bg": "https://images7.alphacoders.com/561/561378.png",
-  "title": "Quiz CSS da Alura",
-  "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+  "title": "Quiz Dota 2",
+  "icon": "https://img.icons8.com/nolan/2x/dota.png",
+  "description": "Teste os seus conhecimentos sobre DOTA 2 e vamos ver quantas você vai acertar",
   "questions": [
     {
       "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
