@@ -6,7 +6,6 @@ import {
   GitHubCorner,
   QuizLogo,
   QuizInput,
-  QuizHeader,
   QuizButton,
 } from "../src/components";
 import db from "../db.json";
@@ -14,7 +13,6 @@ import db from "../db.json";
 export default function Quiz() {
   return (
     <>
-      <QuizHeader props={db}></QuizHeader>
       <QuizBackground backgroundImage={db.bg}>
         <QuizContainer>
           <QuizLogo />

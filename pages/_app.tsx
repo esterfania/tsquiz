@@ -1,5 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import db from "../db.json";
+import { QuizHeader } from "../src/components/QuizHeader/index";
 
 const theme = db.theme;
 const GlobalStyle = createGlobalStyle`
@@ -33,6 +34,7 @@ export default function App({
 }) {
   return (
     <>
+      <QuizHeader props={db}></QuizHeader>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Component {...pageProps} />
