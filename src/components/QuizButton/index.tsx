@@ -1,6 +1,8 @@
-import styled from "styled-components";
+/* eslint-disable react/destructuring-assignment */
+import React from 'react';
+import styled from 'styled-components';
 
-export const QuizButton = styled.button`
+const Button = styled.button`
   width: 100%;
   height: 35px;
   border-radius: 4px;
@@ -15,4 +17,14 @@ export const QuizButton = styled.button`
     background-color: ${({ theme }) => theme.colors.secondary};
     outline: 1px solid white;
   }
+  &:disabled {
+    background-color: #505050;
+    outline: none;
+    cursor: no-drop;
+  }
 `;
+const QuizButton = (props: any) => {
+  const { children } = props;
+  return <Button {...props}>{children}</Button>;
+};
+export default QuizButton;

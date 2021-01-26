@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import React from "react";
+import styled from 'styled-components';
+import React from 'react';
 
 const Input = styled.input`
   width: 100%;
@@ -15,6 +15,6 @@ const Input = styled.input`
     border: 1px solid ${({ theme }) => theme.colors.light};
   }
 `;
-export function QuizInput() {
-  return <Input autoFocus></Input>;
-}
+const QuizInput = (props: any) => <Input autoFocus {...props} />;
+
+export default QuizInput;

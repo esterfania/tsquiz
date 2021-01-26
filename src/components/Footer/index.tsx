@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const FooterWrapper = styled.footer`
   background-color: ${({ theme }) => theme.colors.secondary};
@@ -24,7 +25,7 @@ const FooterWrapper = styled.footer`
   }
 `;
 
-export function Footer(props: any) {
+export default function Footer(props: any) {
   return (
     <FooterWrapper {...props}>
       <a href="https://www.alura.com.br/">
@@ -35,11 +36,14 @@ export function Footer(props: any) {
       </a>
 
       <p>
-        Criado durante a{" "}
+        Criado durante a
+        {' '}
         <a href="https://www.alura.com.br/">
           <span>Imersão React da Alura</span>
-        </a>{" "}
-        por{" "}
+        </a>
+        {' '}
+        por
+        {' '}
         <a href="https://github.com/esterfania">
           <span>@esterfania</span>
         </a>

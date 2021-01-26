@@ -1,8 +1,9 @@
-import { createGlobalStyle, ThemeProvider } from "styled-components";
-import db from "../db.json";
-import { QuizHeader } from "../src/components/QuizHeader/index";
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import React from 'react';
+import db from '../db.json';
+import QuizHeader from '../src/components/QuizHeader';
 
-const theme = db.theme;
+const { theme } = db;
 const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
@@ -34,7 +35,7 @@ export default function App({
 }) {
   return (
     <>
-      <QuizHeader props={db}></QuizHeader>
+      <QuizHeader props={db} />
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Component {...pageProps} />
