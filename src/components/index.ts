@@ -6,3 +6,4 @@ export * from "./GitHubCorner";
 export * from "./QuizLogo";
 export * from "./QuizInput";
 export * from "./QuizHeader";
+export * from "./QuizButton";

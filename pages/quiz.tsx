@@ -6,7 +6,8 @@ import {
   GitHubCorner,
   QuizLogo,
   QuizInput,
-  QuizHeader
+  QuizHeader,
+  QuizButton,
 } from "../src/components";
 import db from "../db.json";
 
@@ -24,6 +25,7 @@ export default function Quiz() {
             <Widget.Content>
               <p>{db.description}</p>
               <QuizInput></QuizInput>
+              <QuizButton>JOGAR</QuizButton>
             </Widget.Content>
           </Widget>
           <Widget>
