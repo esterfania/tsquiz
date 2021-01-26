@@ -5,3 +5,4 @@ export * from "./Footer";
 export * from "./GitHubCorner";
 export * from "./QuizLogo";
 export * from "./QuizInput";
+export * from "./QuizHeader";

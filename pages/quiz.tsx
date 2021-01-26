@@ -6,9 +6,9 @@ import {
   GitHubCorner,
   QuizLogo,
   QuizInput,
+  QuizHeader
 } from "../src/components";
 import db from "../db.json";
-import { QuizHeader } from "../src/components/QuizHeader";
 
 export default function Quiz() {
   return (
