@@ -6,11 +6,12 @@
     "build": "next build",
     "start": "next start",
     "eslint:init": "eslint --init",
-    "lint": "eslint src --ext .ts",
+    "lint": "eslint \"src/**/*\"",
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
     "next": "latest",
+    "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "styled-components": "^5.2.1"
