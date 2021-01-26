@@ -2,6 +2,11 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import React from 'react';
 import db from '../db.json';
 import QuizHeader from '../src/components/QuizHeader';
+import QuizBackground from '../src/components/QuizBackground';
+import QuizContainer from '../src/components/QuizContainer';
+import QuizLogo from '../src/components/QuizLogo';
+import Footer from '../src/components/Footer';
+import GitHubCorner from '../src/components/GitHubCorner';
 
 const { theme } = db;
 const GlobalStyle = createGlobalStyle`
@@ -35,10 +40,18 @@ export default function App({
 }) {
   return (
     <>
-      <QuizHeader props={db} />
       <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Component {...pageProps} />
+        <QuizHeader props={db} />
+        <QuizBackground backgroundImage={db.bg}>
+          <QuizContainer>
+            <QuizLogo />
+            <GlobalStyle />
+            <Component {...pageProps} />
+
+            <Footer />
+          </QuizContainer>
+          <GitHubCorner projectUrl="https://github.com/esterfania/tsquiz" />
+        </QuizBackground>
       </ThemeProvider>
     </>
   );
