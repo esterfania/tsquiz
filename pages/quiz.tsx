@@ -6,6 +6,7 @@ import QuizButton from '../src/components/QuizButton';
 
 export default function Quiz() {
   return (
+    <>
     <Widget>
       <Widget.Header>
         <BackButton />
@@ -20,5 +21,6 @@ export default function Quiz() {
         <QuizButton>Confirmar</QuizButton>
       </Widget.Content>
     </Widget>
+    </>
   );
 }
