@@ -2,7 +2,7 @@
 
 This is a simple study project for Next JS and React, built during Alura's immersion.
 
-![dota2quiz](https://user-images.githubusercontent.com/35200622/105756352-3f969e00-5f2b-11eb-911e-20ed9820f179.png)
+![dota2quiz](https://user-images.githubusercontent.com/35200622/105925652-47d00580-601f-11eb-8fa6-7c9107c95c46.png)
 
 
 ## Notes
