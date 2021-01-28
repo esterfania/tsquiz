@@ -4,6 +4,7 @@ import Widget from '../src/components/Widget';
 import BackButton from '../src/components/BackButton/index';
 import QuizButton from '../src/components/QuizButton';
 import db from '../db.json';
+import Spinner from '../src/components/Spinner';
 
 export default function Quiz() {
   enum ScreenStateEnum {
@@ -21,7 +22,7 @@ export default function Quiz() {
     setTimeout(() => {
       setScreenState(ScreenStateEnum.QUIZ);
     }, 1 * 1000);
-  }, []);
+  }, [ScreenStateEnum.QUIZ]);
 
   function handleSubmitQuiz() {
     const nextQuestion = questionIndex + 1;
@@ -54,7 +55,9 @@ function LoadingWidget() {
     <Widget>
       <Widget.Header>Carregando...</Widget.Header>
 
-      <Widget.Content>[Desafio do Loading]</Widget.Content>
+      <Widget.Content>
+        <Spinner />
+      </Widget.Content>
     </Widget>
   );
 }
