@@ -6,20 +6,27 @@
   "author": "Ester Gama",
   "questions": [
     {
-      "image": "https://media4.giphy.com/media/VY4puEbOiZTe8/giphy.gif?cid=ecf05e47g0lqsupaxqmid5f2rwmpm4oy5bx3f4af8jg0w7ko&rid=giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
+      "image": "https://img.quizur.com/f/img5bfe8ed5db6b86.84615045.jpg",
+      "title": "Bathrum, o Spirit Breaker usa um anel em seu focinho por uma razão. Qual seria essa razão?",
       "description": "Essa é pra aquecer",
-      "answer": 2,
-      "alternatives": [".elemento", "*elemento", "#elemento", "%elemento"]
+      "answer": 1,
+      "alternatives": [
+        "É um grilhão para conter seu verdadeiro poder",
+        "Para se lembrar que serve a um mestre oculto, o plano espiritual",
+        "Ele só consegue se manter no plano físico por conta desse anel",
+        "Ele usa só por estilo"
+      ]
     },
     {
-      "image": "https://media4.giphy.com/media/11MICB2ZmzK036/giphy.gif?cid=ecf05e47kw9allbs4ftvpsnav339rgmhepoep8wuff4dygqc&rid=giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
+      "image": "https://img.quizur.com/f/img5bfe959136c396.95643327.png",
+      "title": "Sobre o Pudge: De que é composta a sua 'armadura de corpos'?",
       "description": "Faz tempo em haha",
-      "answer": 0,
+      "answer": 3,
       "alternatives": [
-        "background: linear-gradient(#e66465, #9198e5);",
-        "background: gradient(#e66465, #9198e5);"
+        "Corpos de Heróis Inimigos e Aliados",
+        "Corpos apenas de unidades inimigas",
+        "Corpos de Heróis e unidades inimigas",
+        "Corpos apenas de heróis inimigos"
       ]
     }
   ],

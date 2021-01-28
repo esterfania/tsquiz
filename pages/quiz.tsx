@@ -30,9 +30,13 @@ export default function QuizPage() {
   function handleSubmitQuiz() {
     const nextQuestion = questionIndex + 1;
     if (nextQuestion < totalQuestions) {
-      setCurrentQuestion(nextQuestion);
+      setTimeout(() => {
+        setCurrentQuestion(nextQuestion);
+      }, 1000);
     } else {
-      setScreenState(ScreenStateEnum.RESULT);
+      setTimeout(() => {
+        setScreenState(ScreenStateEnum.RESULT);
+      }, 1000);
     }
   }
   return (
