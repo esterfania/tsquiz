@@ -1,12 +1,10 @@
 import React from 'react';
-import QuizOptionButton from '../src/components/QuizOptionButton';
-import Widget from '../src/components/Widget';
-import BackButton from '../src/components/BackButton/index';
-import QuizButton from '../src/components/QuizButton';
-import db from '../db.json';
-import Spinner from '../src/components/Spinner';
 
-export default function Quiz() {
+import db from '../db.json';
+import { LoadingWidget } from '../src/components/LoadingWidget';
+import { QuestionWidget } from '../src/components/QuestionWidget';
+
+export default function QuizPage() {
   enum ScreenStateEnum {
     LOADING,
     RESULT,
@@ -18,10 +16,15 @@ export default function Quiz() {
   const questionIndex = currentQuestion;
   const question = db.questions[questionIndex];
 
+  //[React call: Effects]
+  // didMount
+  // willUpdate
+  // willUnmount
+
   React.useEffect(() => {
     setTimeout(() => {
       setScreenState(ScreenStateEnum.QUIZ);
-    }, 1 * 1000);
+    }, 1000);
   }, [ScreenStateEnum.QUIZ]);
 
   function handleSubmitQuiz() {
@@ -37,7 +40,7 @@ export default function Quiz() {
       {(screenState as ScreenStateEnum) === ScreenStateEnum.QUIZ && (
         <QuestionWidget
           question={question}
-          questionIndex={questionIndex}
+          questionIndex={currentQuestion}
           totalQuestions={totalQuestions}
           onSubmit={handleSubmitQuiz}
         />
@@ -47,56 +50,5 @@ export default function Quiz() {
         <div>Você acertou X questões, parabéns!</div>
       )}
     </>
-  );
-}
-
-function LoadingWidget() {
-  return (
-    <Widget>
-      <Widget.Header>Carregando...</Widget.Header>
-
-      <Widget.Content>
-        <Spinner />
-      </Widget.Content>
-    </Widget>
-  );
-}
-
-function QuestionWidget({ question, questionIndex, totalQuestions, onSubmit }: any) {
-  const questionId = `question__${questionIndex}`;
-  return (
-    <Widget>
-      <Widget.Header>
-        <BackButton />
-        <h3>{`Pergunta ${questionIndex + 1} de ${totalQuestions}`}</h3>
-      </Widget.Header>
-      <img
-        alt="Descrição"
-        style={{ width: '100%', height: '150px', objectFit: 'cover' }}
-        src={question.image}
-      />
-      <Widget.Content>
-        <form onSubmit={onSubmit}>
-          <h2>{question.title}</h2>
-          <p>{question.description}</p>
-          {question.alternatives.map((item: string, index: number) => {
-            const alternativeId = `${item}_${index}`;
-            return (
-              <QuizOptionButton key={index} as="label" htmlFor={alternativeId}>
-                <input
-                  key={index}
-                  style={{ display: 'none' }}
-                  type="radio"
-                  name={questionId}
-                  id={alternativeId}
-                />
-                {item}
-              </QuizOptionButton>
-            );
-          })}
-          <QuizButton type="submit">Confirmar</QuizButton>
-        </form>
-      </Widget.Content>
-    </Widget>
   );
 }
