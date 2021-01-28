@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const QuizBackground: any = styled.div`
+const QuizBackground = styled.div`
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -13,10 +13,7 @@ const QuizBackground: any = styled.div`
       content: '';
       background-size: cover;
       background-position: center;
-      background-image: linear-gradient(
-          transparent,
-          ${({ theme }) => theme.colors.mainBg}
-        ),
+      background-image: linear-gradient(transparent, ${({ theme }) => theme.colors.mainBg}),
         url(${({ backgroundImage }: any) => backgroundImage});
       display: block;
       width: 100%;

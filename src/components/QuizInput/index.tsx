@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const Input = styled.input`
   width: 100%;
@@ -16,13 +15,6 @@ const Input = styled.input`
     border: 1px solid ${({ theme }) => theme.colors.light};
   }
 `;
-const QuizInput = (props: any) => <Input autoFocus {...props} />;
-
-QuizInput.propTypes = {
-  onChange: PropTypes.func.isRequired,
-  placeholder: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
-};
+const QuizInput = (props) => <Input {...props} />;
 
 export default QuizInput;

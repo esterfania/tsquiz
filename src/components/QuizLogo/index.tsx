@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 import React from 'react';
-import PropTypes from 'prop-types';
 
-function Logo({ className }: any) {
+function Logo(): JSX.Element {
   return (
     <svg
-      className={className}
       width="135"
       height="67"
       viewBox="0 0 135 67"
@@ -78,10 +76,6 @@ function Logo({ className }: any) {
     </svg>
   );
 }
-
-Logo.propTypes = {
-  className: PropTypes.string.isRequired,
-};
 
 const QuizLogo = styled(Logo)`
   margin: auto;

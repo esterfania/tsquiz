@@ -1,45 +1,48 @@
 module.exports = {
+  root: true,
   env: {
-    browser: true,
-    es2021: true,
+    node: true,
+    es6: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb'],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 12,
-    sourceType: 'module',
-  },
-  plugins: ['react', '@typescript-eslint'],
-  rules: {
-    'linebreak-style': 0,
-    'react/jsx-filename-extension': [
-      2,
-      { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
-    ],
-    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-    'react/jsx-props-no-spreading': 'off',
-    'no-use-before-define': ['off', { functions: false, classes: false }],
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        js: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
+  parserOptions: { ecmaVersion: 8 },
+  ignorePatterns: ['node_modules/*', '.next/*', '.out/*', '!.prettierrc.js'],
+  extends: ['eslint:recommended'],
+  overrides: [
+    {
+      files: ['**/*.ts', '**/*.tsx'],
+      parser: '@typescript-eslint/parser',
+      settings: { react: { version: 'detect' } },
+      env: {
+        browser: true,
+        node: true,
+        es6: true,
       },
-    ],
-    quotes: ['error', 'single'],
-  },
-  settings: {
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
-        moduleDirectory: ['node_modules', 'src/'],
+      extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:react/recommended',
+        'plugin:react-hooks/recommended',
+        'plugin:jsx-a11y/recommended',
+        'prettier/@typescript-eslint',
+        'plugin:prettier/recommended',
+      ],
+      rules: {
+        'react/prop-types': 'off',
+
+        'react/react-in-jsx-scope': 'off',
+
+        'jsx-a11y/anchor-is-valid': 'off',
+
+        '@typescript-eslint/no-unused-vars': ['error'],
+        '@typescript-eslint/no-explicit-any': 'off',
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        'prettier/prettier': [
+          'error',
+          {
+            endOfLine: 'auto',
+          },
+        ],
       },
     },
-  },
+  ],
 };

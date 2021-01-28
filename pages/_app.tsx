@@ -7,6 +7,7 @@ import QuizContainer from '../src/components/QuizContainer';
 import QuizLogo from '../src/components/QuizLogo';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
+import { AppProps } from 'next/dist/next-server/lib/router/router';
 
 const { theme } = db;
 const GlobalStyle = createGlobalStyle`
@@ -31,13 +32,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export default function App({
-  Component,
-  pageProps,
-}: {
-  Component: any;
-  pageProps: any;
-}) {
+export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <ThemeProvider theme={theme}>

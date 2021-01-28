@@ -25,7 +25,8 @@ const Button = styled.button`
     cursor: no-drop;
   }
 `;
-const QuizButton = (props: any) => {
+
+const QuizButton = (props) => {
   const { children } = props;
   return <Button {...props}>{children}</Button>;
 };

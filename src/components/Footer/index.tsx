@@ -36,14 +36,11 @@ export default function Footer(props: any) {
       </a>
 
       <p>
-        Criado durante a
-        {' '}
+        Criado durante a{' '}
         <a href="https://www.alura.com.br/">
           <span>Imersão React da Alura</span>
-        </a>
-        {' '}
-        por
-        {' '}
+        </a>{' '}
+        por{' '}
         <a href="https://github.com/esterfania">
           <span>@esterfania</span>
         </a>

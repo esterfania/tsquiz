@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ButtonWrapper = styled.button`
+const ButtonWrapper = styled.a`
   width: 100%;
   height: 35px;
   border-radius: 4px;
@@ -11,15 +11,16 @@ const ButtonWrapper = styled.button`
   margin-top: 10px;
   color: white;
   cursor: pointer;
-  outline: none;
-  &:hover {
+  outline: 0;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  display: block;
+  transition: all 0.3s ease 0s;
+
+  &:hover,
+  &:focus {
     opacity: 0.7;
-    transition: all 0.3s ease 0s;
-  }
-  &:disabled {
-    background-color: #505050;
-    outline: none;
-    cursor: no-drop;
   }
 `;
 const QuizOptionButton = (props: any) => {
