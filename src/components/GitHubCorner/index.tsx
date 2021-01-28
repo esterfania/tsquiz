@@ -40,7 +40,7 @@ const SVGWrapper = styled.svg`
   }
 `;
 
-export default function GitHubCorner({ projectUrl }: { projectUrl: string }): JSX.Element {
+export default function GitHubCorner({ projectUrl }: { projectUrl: string }) {
   return (
     <Wrapper>
       <a href={projectUrl} target="_blank" rel="noreferrer">

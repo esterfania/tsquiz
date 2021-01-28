@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
-function Logo(): JSX.Element {
+function Logo() {
   return (
     <svg
       width="135"
