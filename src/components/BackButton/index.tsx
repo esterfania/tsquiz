@@ -9,6 +9,7 @@ const BackButton = () => (
       viewBox="0 0 24 24"
       fill="none"
       className="BackArrowLink__SVG-u1u7k5-1 iiAaYI"
+      style={{ verticalAlign: 'middle' }}
     >
       <path
         fillRule="evenodd"

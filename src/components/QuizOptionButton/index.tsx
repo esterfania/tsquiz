@@ -19,7 +19,7 @@ const ButtonWrapper = styled.a`
 
   &:hover,
   &:focus {
-    opacity: 0.7;
+    opacity: 0.5;
   }
 `;
 const QuizOptionButton = (props: any) => {
