@@ -1,5 +1,4 @@
 import React from 'react';
-import { fileURLToPath } from 'url';
 
 import db from '../db.json';
 import QuizForm from '../src/components/QuizForm';
