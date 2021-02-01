@@ -15,6 +15,9 @@ export default function QuizHeader({ props }: any) {
       <meta property="og:title" content={title} />
 
       <meta property="og:image" content={bg} />
+      <meta property="og:image:type" content="image/jpeg" />
+      <meta property="og:image:width" content="800" />
+      <meta property="og:image:height" content="600" />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="twitter:domain" content="https://tsquiz.vercel.app/" />
