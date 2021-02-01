@@ -30,7 +30,10 @@
       ]
     }
   ],
-  "external": ["https://aluraquiz.felipebeskow.vercel.app/", "https://quiz-pokemon.vercel.app/"],
+  "external": [
+    "https://aluraquiz-css.omariosouto.vercel.app/",
+    "https://aluraquiz-devsoutinho.omariosouto.vercel.app/"
+  ],
   "theme": {
     "colors": {
       "primary": "#56449C",
