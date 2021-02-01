@@ -1,10 +1,8 @@
 import React from 'react';
-
-import db from '../db.json';
-import BackButton from '../src/components/BackButton';
-import { LoadingWidget } from '../src/components/LoadingWidget';
-import { QuestionWidget } from '../src/components/QuestionWidget';
-import Widget from '../src/components/Widget';
+import BackButton from '../../components/BackButton';
+import { LoadingWidget } from '../../components/LoadingWidget';
+import { QuestionWidget } from '../../components/QuestionWidget';
+import Widget from '../../components/Widget';
 
 function QuizResult({ results }) {
   return (
@@ -27,7 +25,7 @@ function QuizResult({ results }) {
   );
 }
 
-export default function QuizPage() {
+export default function QuizPage({ externalQuestions, externalBg }) {
   enum ScreenStateEnum {
     LOADING,
     RESULT,
@@ -35,10 +33,11 @@ export default function QuizPage() {
   }
   const [screenState, setScreenState] = React.useState(ScreenStateEnum.LOADING);
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
-  const totalQuestions = db.questions.length;
+  const totalQuestions = externalQuestions.length;
   const questionIndex = currentQuestion;
-  const question = db.questions[questionIndex];
+  const question = externalQuestions[questionIndex];
   const [results, setResults] = React.useState([]);
+  const bg = externalBg;
 
   function addResults(result: never) {
     setResults([...results, result]);

@@ -15,6 +15,7 @@ const ButtonWrapper = styled.a`
   padding: 10px 15px;
   margin-bottom: 8px;
   display: block;
+  word-break: break-word;
   transition: all 0.3s ease 0s;
 
   &:hover,
