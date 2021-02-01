@@ -16,7 +16,7 @@ export default function QuizDaGaleraPage() {
       <QuizBackground backgroundImage={db.bg}>
         <QuizContainer>
           <QuizLogo />
-          <QuizScreen externalQuestions={db.questions} externalBg={db.bg} />
+          <QuizScreen externalQuestions={db.questions} />
           <Footer />
         </QuizContainer>
         <GitHubCorner projectUrl="https://github.com/esterfania/tsquiz" />
