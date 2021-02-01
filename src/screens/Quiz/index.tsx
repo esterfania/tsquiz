@@ -25,7 +25,7 @@ function QuizResult({ results }) {
   );
 }
 
-export default function QuizPage({ externalQuestions, externalBg }) {
+export default function QuizPage({ externalQuestions }) {
   enum ScreenStateEnum {
     LOADING,
     RESULT,
@@ -37,7 +37,6 @@ export default function QuizPage({ externalQuestions, externalBg }) {
   const questionIndex = currentQuestion;
   const question = externalQuestions[questionIndex];
   const [results, setResults] = React.useState([]);
-  const bg = externalBg;
 
   function addResults(result: never) {
     setResults([...results, result]);
