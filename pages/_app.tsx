@@ -1,12 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import React from 'react';
 import db from '../db.json';
-import QuizHeader from '../src/components/QuizHeader';
-import QuizBackground from '../src/components/QuizBackground';
-import QuizContainer from '../src/components/QuizContainer';
-import QuizLogo from '../src/components/QuizLogo';
-import Footer from '../src/components/Footer';
-import GitHubCorner from '../src/components/GitHubCorner';
 import { AppProps } from 'next/dist/next-server/lib/router/router';
 
 const { theme } = db;
@@ -36,17 +30,17 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <QuizHeader props={db} />
+        {/* <QuizHeader props={db} />
         <QuizBackground backgroundImage={db.bg}>
           <QuizContainer>
-            <QuizLogo />
-            <GlobalStyle />
-            <Component {...pageProps} />
-
+            <QuizLogo /> */}
+        <GlobalStyle />
+        <Component {...pageProps} />
+        {/* 
             <Footer />
           </QuizContainer>
           <GitHubCorner projectUrl="https://github.com/esterfania/tsquiz" />
-        </QuizBackground>
+        </QuizBackground> */}
       </ThemeProvider>
     </>
   );
