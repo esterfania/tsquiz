@@ -11,10 +11,20 @@ const AlternativesForm = styled.form`
       background-color: ${({ theme }) => theme.colors.primary};
 
       &[data-status='SUCCESS'] {
-        background-color: ${({ theme }) => theme.colors.success};
+        background: rgba(35, 211, 50, 0.35);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(15.5px);
+        -webkit-backdrop-filter: blur(15.5px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
       }
       &[data-status='ERROR'] {
-        background-color: ${({ theme }) => theme.colors.wrong};
+        background: rgba(228, 2, 5, 0.35);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(15.5px);
+        -webkit-backdrop-filter: blur(15.5px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
       }
     }
     &:focus {
@@ -38,6 +48,7 @@ export function QuestionWidget({ question, questionIndex, totalQuestions, onSubm
         <BackButton />
         <h3>{`Pergunta ${questionIndex + 1} de ${totalQuestions}`}</h3>
       </Widget.Header>
+      <QuestionFeedback isQuestionSubmited={isQuestionSubmited} isCorrectAnswer={isCorrectAnswer} />
       <img
         alt="Descrição"
         style={{ width: '100%', height: '150px', objectFit: 'cover' }}
@@ -85,10 +96,40 @@ export function QuestionWidget({ question, questionIndex, totalQuestions, onSubm
           <QuizButton type="submit" disabled={!hasAlternativeSelected}>
             Confirmar
           </QuizButton>
-          {/* {isQuestionSubmited && isCorrectAnswer && <p>Acertou</p>}
-          {isQuestionSubmited && !isCorrectAnswer && <p>Errou</p>} */}
         </AlternativesForm>
       </Widget.Content>
     </Widget>
   );
+}
+
+function QuestionFeedback({ isQuestionSubmited, isCorrectAnswer }) {
+  const feedback = isQuestionSubmited && (
+    <div
+      style={{
+        position: 'absolute',
+        left: '50%',
+        transform: 'translate(-50%, 0)',
+        width: '100%',
+        height: '150px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'black',
+        opacity: '0.5',
+        fontSize: '2em',
+      }}
+    >
+      {isCorrectAnswer && (
+        <span role="img" aria-label="acertou">
+          ✅
+        </span>
+      )}
+      {!isCorrectAnswer && (
+        <span role="img" aria-label="errou">
+          ❌
+        </span>
+      )}
+    </div>
+  );
+  return feedback;
 }

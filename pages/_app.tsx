@@ -6,7 +6,6 @@ import QuizHeader from '../src/components/QuizHeader';
 import QuizBackground from '../src/components/QuizBackground';
 import QuizContainer from '../src/components/QuizContainer';
 import QuizLogo from '../src/components/QuizLogo';
-import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 
 const { theme } = db;
@@ -42,7 +41,6 @@ export default function App({ Component, pageProps }: AppProps) {
             <QuizLogo />
             <GlobalStyle />
             <Component {...pageProps} />
-            <Footer />
           </QuizContainer>
           <GitHubCorner projectUrl="https://github.com/esterfania/tsquiz" />
         </QuizBackground>
