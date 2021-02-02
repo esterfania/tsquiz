@@ -11,9 +11,8 @@
       "description": "Essa é pra aquecer",
       "answer": 1,
       "alternatives": [
-        "É um grilhão para conter seu verdadeiro poder",
-        "Para se lembrar que serve a um mestre oculto, o plano espiritual",
-        "Ele só consegue se manter no plano físico por conta desse anel",
+        "É um anel para conter seu poder",
+        "Para se lembrar que ele serve ao plano espiritual",
         "Ele usa só por estilo"
       ]
     },
@@ -21,13 +20,26 @@
       "image": "https://img.quizur.com/f/img5bfe959136c396.95643327.png",
       "title": "Sobre o Pudge: De que é composta a sua 'armadura de corpos'?",
       "description": "Faz tempo em haha",
-      "answer": 3,
+      "answer": 2,
       "alternatives": [
-        "Corpos de Heróis Inimigos e Aliados",
-        "Corpos apenas de unidades inimigas",
+        "Corpos de Heróis inimigos e aliados",
         "Corpos de Heróis e unidades inimigas",
-        "Corpos apenas de heróis inimigos"
+        "Corpos de heróis inimigos"
       ]
+    },
+    {
+      "image": "https://cdnb.artstation.com/p/assets/images/images/013/427/695/large/yago-dawkins-invoker-final.jpg",
+      "title": "Qual é o principal rival do Invoker?",
+      "description": "",
+      "answer": 0,
+      "alternatives": ["Tinker", "Anti-Mage", "Bloodseeker"]
+    },
+    {
+      "image": "http://1.bp.blogspot.com/-D1juKJ06RLc/Umhm8VsIkvI/AAAAAAAAKds/-FteCela3R0/s2560/phantom.lancer.dota.2.by.biggreenpepper.wallpaper404.com.deviant.art.1920x1200.jpg",
+      "title": "Quantas cópias o Phantom Lancer pode criar com a sua skill Juxtapose no level 3",
+      "description": "",
+      "answer": 0,
+      "alternatives": ["6", "15", "9"]
     }
   ],
   "external": [
